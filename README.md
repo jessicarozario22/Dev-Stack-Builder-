@@ -99,6 +99,34 @@ A loading state is displayed while the technology data is being loaded from the 
 
 ---
 
+
+
+## 🎨 Design
+
+The project uses a shared gradient theme for the main brand elements, hero heading, and primary buttons.
+
+**Brand Gradient:**
+
+```css
+linear-gradient(90deg, #ff7a18, #ff3d81, #8b5cf6);
+```
+
+The layout is designed with a clean and modern developer-focused interface.
+
+---
+
+## 📱 Responsive Design
+
+The website is responsive across:
+
+* 💻 Desktop
+* 📱 Mobile
+* 📲 Tablet
+
+The technology cards automatically adjust their layout based on screen size, while the navigation changes to a mobile-friendly menu on smaller devices.
+
+---
+
 # 📚 React Questions & Answers
 
 ## 1. What is JSX, and why is it used in React?
@@ -214,32 +242,6 @@ For example:
 ```
 
 The child can call `onAdd()` when the user clicks the **Add to Stack** button.
-
----
-
-## 🎨 Design
-
-The project uses a shared gradient theme for the main brand elements, hero heading, and primary buttons.
-
-**Brand Gradient:**
-
-```css
-linear-gradient(90deg, #ff7a18, #ff3d81, #8b5cf6);
-```
-
-The layout is designed with a clean and modern developer-focused interface.
-
----
-
-## 📱 Responsive Design
-
-The website is responsive across:
-
-* 💻 Desktop
-* 📱 Mobile
-* 📲 Tablet
-
-The technology cards automatically adjust their layout based on screen size, while the navigation changes to a mobile-friendly menu on smaller devices.
 
 ---
 
