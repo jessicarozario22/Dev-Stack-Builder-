@@ -5,11 +5,11 @@ Users can explore different web development technologies, learn about them, and 
 
 ## 🚀 Live Website
 
-[🔗 Add your deployed website link here](https://devbuilderstack.netlify.app/)
+[🔗 Netlify Deployed website link here](https://devbuilderstack.netlify.app/)
 
 ## 📂 GitHub Repository
 
-🔗 Add your GitHub repository link here
+🔗[GitHub repository link here](https://github.com/jessicarozario22/Dev-Stack-Builder-)
 
 ---
 
