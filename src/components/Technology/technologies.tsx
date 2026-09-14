@@ -17,22 +17,26 @@ const Technologies = ({
   >([]);
 
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section
+      id="technologies"
+      className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 lg:px-8"
+    >
       {/* Section Heading */}
       <div className="mb-8">
-        <h2 className="text-4xl font-bold">
+        <h2 className="text-3xl font-bold sm:text-4xl">
           Explore the Technologies
         </h2>
 
-        <p className="mt-2 text-slate-500">
+        <p className="mt-2 text-sm text-slate-500 sm:text-base">
           Discover and add technologies to your development stack.
         </p>
       </div>
 
-      {/* Main Content */}
-      <div className="flex items-start gap-6">
-        {/* Technology Cards */}
-        <div className="flex-1">
+      {/* Available Technologies + Your Stack */}
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
+
+        {/* Available Technologies */}
+        <div className="w-full lg:flex-1">
           <AvailableStack
             technologies={technologies}
             selectedTechnologies={selectedTechnologies}
@@ -41,10 +45,13 @@ const Technologies = ({
         </div>
 
         {/* Your Stack */}
-        <SelectedTechnologies
-          selectedTechnologies={selectedTechnologies}
-          setSelectedTechnologies={setSelectedTechnologies}
-        />
+        <div className="w-full lg:w-[380px]">
+          <SelectedTechnologies
+            selectedTechnologies={selectedTechnologies}
+            setSelectedTechnologies={setSelectedTechnologies}
+          />
+        </div>
+
       </div>
     </section>
   );

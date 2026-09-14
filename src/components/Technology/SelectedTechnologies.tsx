@@ -22,9 +22,10 @@ const SelectedTechnologies = ({
   };
 
   return (
-    <div className="w-full max-w-sm rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <div className="w-full max-w-2xl rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
+
       {/* Header */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-3">
         <h2 className="text-lg font-bold text-slate-900">
           Your Stack
         </h2>
@@ -32,7 +33,7 @@ const SelectedTechnologies = ({
         {selectedTechnologies.length > 0 && (
           <button
             onClick={clearStack}
-            className="text-sm font-medium text-red-500 transition hover:text-red-600"
+            className="shrink-0 text-xs font-medium text-red-500 transition hover:text-red-600 sm:text-sm"
           >
             Remove All
           </button>
@@ -42,7 +43,8 @@ const SelectedTechnologies = ({
       {selectedTechnologies.length > 0 ? (
         <>
           <p className="mt-1 text-sm text-slate-500">
-            {selectedTechnologies.length} Technology Selected
+            {selectedTechnologies.length} Technology
+            {selectedTechnologies.length > 1 ? "ies" : "y"} Selected
           </p>
 
           {/* Selected Technologies */}
@@ -50,10 +52,10 @@ const SelectedTechnologies = ({
             {selectedTechnologies.map((technology) => (
               <div
                 key={technology.id}
-                className="flex items-center justify-between rounded-xl border border-slate-200 p-3"
+                className="flex items-center justify-between gap-3 rounded-xl border border-slate-200 p-3"
               >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center">
+                <div className="flex min-w-0 items-center gap-3">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center">
                     <img
                       src={technology.icon}
                       alt={`${technology.name} logo`}
@@ -61,12 +63,12 @@ const SelectedTechnologies = ({
                     />
                   </div>
 
-                  <div>
-                    <h3 className="text-sm font-semibold text-slate-900">
+                  <div className="min-w-0">
+                    <h3 className="truncate text-sm font-semibold text-slate-900">
                       {technology.name}
                     </h3>
 
-                    <p className="text-xs text-slate-500">
+                    <p className="truncate text-xs text-slate-500">
                       {technology.category}
                     </p>
                   </div>
@@ -75,7 +77,7 @@ const SelectedTechnologies = ({
                 {/* Delete Button */}
                 <button
                   onClick={() => removeTechnology(technology.id)}
-                  className="rounded-md p-1 text-red-500 transition hover:bg-red-50 hover:text-red-600"
+                  className="shrink-0 rounded-md p-1 text-red-500 transition hover:bg-red-50 hover:text-red-600"
                   title="Remove from stack"
                   aria-label={`Remove ${technology.name} from stack`}
                 >
@@ -87,7 +89,7 @@ const SelectedTechnologies = ({
         </>
       ) : (
         /* Empty State */
-        <div className="mt-4 rounded-xl border border-dashed border-slate-300 p-6 text-center">
+        <div className="mt-4 rounded-xl border border-dashed border-slate-300 p-5 text-center sm:p-6">
           <p className="text-sm text-slate-500">
             Your stack is empty.
           </p>
