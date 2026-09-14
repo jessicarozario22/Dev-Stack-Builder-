@@ -2,8 +2,8 @@ import Logo from "../assets/logo-text.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-base-200 text-base-content">
-            <div className="container mx-auto grid grid-cols-1 gap-8 px-6 py-10 md:grid-cols-4">
+        <footer className=" min-h-[40vh] border-b border-slate-200  bg-base-50 text-base-content">
+            <div className=" items-center justify-center container mx-auto grid grid-cols-1 gap-8 px-6 py-10 md:grid-cols-4">
 
                 {/* Logo + Copyright */}
                 <div>
@@ -21,21 +21,21 @@ const Footer = () => {
                     <div className="mt-4 flex flex-wrap gap-3">
                         <a
                             href="#"
-                            className="btn btn-sm btn-outline btn-primary"
+                            className=""
                         >
                             GitHub
                         </a>
 
                         <a
                             href="#"
-                            className="btn btn-sm btn-outline btn-secondary"
+                            className=""
                         >
                             Twitter
                         </a>
 
                         <a
                             href="#"
-                            className="btn btn-sm btn-outline btn-accent"
+                            className=""
                         >
                             LinkedIn
                         </a>

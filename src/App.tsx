@@ -28,11 +28,23 @@ function App() {
 
       <Banner />
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <Technologies
-          technologiesPromise={technologiesPromise}
-        />
-      </Suspense>
+      <Suspense
+  fallback={
+    <div className="flex min-h-[300px] items-center justify-center">
+      <div className="flex flex-col items-center gap-3">
+        <span className="loading loading-spinner loading-lg text-primary"></span>
+
+        <p className="text-sm text-slate-500">
+          Loading technologies...
+        </p>
+      </div>
+    </div>
+  }
+>
+  <Technologies
+    technologiesPromise={technologiesPromise}
+  />
+</Suspense>
 
       <ToastContainer position="bottom-right" />
 

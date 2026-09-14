@@ -87,9 +87,9 @@ const TechnologiesCard = ({
       <button
         onClick={handleAddToStack}
         disabled={isSelected}
-        className={`mt-4 w-full rounded-lg py-3 text-sm font-medium text-white transition ${
+        className={`mt-4 w-full rounded-full py-3 text-sm font-medium text-white active:text-slate-500 transition ${
           isSelected
-            ? "cursor-not-allowed bg-slate-400"
+            ? "cursor-not-allowed bg-slate-400 text-slate-800 transition"
             : "bg-slate-950 hover:bg-slate-800"
         }`}
       >
